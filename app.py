@@ -31,7 +31,7 @@ from gevent.pywsgi import WSGIServer
 app = Flask(__name__)
 
 # Model saved with Keras model.save()
-MODEL_PATH = 'https://drive.google.com/file/d/1fmwIyZGRcRSXBHk0R6zjmivAt6SGdgRp/view?usp=sharing'
+MODEL_PATH = 'models/model.h5'
 TARGET_SIZE = (224,224,3)
 
 # Load your trained model
