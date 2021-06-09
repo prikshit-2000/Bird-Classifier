@@ -12,7 +12,7 @@ import glob
 import numpy as np
 import tensorflow as tf
 from tensorflow import keras
-from keras.models import load_model
+from tensorflow.keras.models import load_model
 # from tensorflow.keras.models import Sequential
 # from tensorflow.keras.layers import Conv2D, Dense, Flatten, Dropout, MaxPool2D, Dropout
 # from tensorflow.keras.optimizers import Adam
