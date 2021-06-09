@@ -38,8 +38,6 @@ TARGET_SIZE = (224,224,3)
 
 # Load your trained model
 model = load_model(MODEL_PATH)
-converter = tf.lite.TFLiteConverter.from_keras_model(model)
-tflite_model = converter.convert()
 
 tflite_model.make_predict_function()          # Necessary
 # print('Model loaded. Start serving...')
@@ -49,7 +47,7 @@ tflite_model.make_predict_function()          # Necessary
 #from keras.applications.resnet50 import ResNet50
 #model = ResNet50(weights='imagenet')
 #model.save('')
-print('Model loaded. Check http://127.0.0.1:5000/')
+#print('Model loaded. Check http://127.0.0.1:5000/')
 
 
 def model_predict(img_path, model):
@@ -86,7 +84,7 @@ def upload():
         f.save(file_path)
 
         # Make prediction
-        preds = model_predict(file_path, tflite_model)
+        preds = model_predict(file_path, model)
 
         # Process your result for human
         pred_class = preds.argmax(axis=-1)            # Simple argmax  
