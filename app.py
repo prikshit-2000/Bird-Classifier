@@ -11,7 +11,7 @@ import numpy as np
 import glob
 import numpy as np
 import tensorflow as tf
-import keras
+from tensorflow import keras
 from keras.models import load_model
 # from tensorflow.keras.models import Sequential
 # from tensorflow.keras.layers import Conv2D, Dense, Flatten, Dropout, MaxPool2D, Dropout
