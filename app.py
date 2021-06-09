@@ -86,7 +86,7 @@ def upload():
         f.save(file_path)
 
         # Make prediction
-        preds = model_predict(file_path, model)
+        preds = model_predict(file_path, tflite_model)
 
         # Process your result for human
         pred_class = preds.argmax(axis=-1)            # Simple argmax  
