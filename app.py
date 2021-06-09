@@ -33,7 +33,7 @@ from gevent.pywsgi import WSGIServer
 app = Flask(__name__)
 
 # Model saved with Keras model.save()
-MODEL_PATH = './models/model.h5'
+MODEL_PATH = '/models/model.h5'
 TARGET_SIZE = (224,224,3)
 
 # Load your trained model
