@@ -38,7 +38,10 @@ TARGET_SIZE = (224,224,3)
 
 # Load your trained model
 model = load_model(MODEL_PATH)
-model.make_predict_function()          # Necessary
+converter = tf.lite.TFLiteConverter.from_keras_model(model)
+tflite_model = converter.convert()
+
+tflite_model.make_predict_function()          # Necessary
 # print('Model loaded. Start serving...')
 
 # You can also use pretrained model from Keras
