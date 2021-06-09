@@ -11,6 +11,7 @@ import numpy as np
 import glob
 import numpy as np
 import tensorflow as tf
+from keras.models import load_model
 # from tensorflow.keras.models import Sequential
 # from tensorflow.keras.layers import Conv2D, Dense, Flatten, Dropout, MaxPool2D, Dropout
 # from tensorflow.keras.optimizers import Adam
@@ -35,7 +36,7 @@ MODEL_PATH = 'models/model.h5'
 TARGET_SIZE = (224,224,3)
 
 # Load your trained model
-model = tf.keras.models.load_model(MODEL_PATH)
+model = load_model(MODEL_PATH)
 model.make_predict_function()          # Necessary
 # print('Model loaded. Start serving...')
 
