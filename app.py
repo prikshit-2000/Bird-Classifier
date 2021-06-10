@@ -25,7 +25,10 @@ app = Flask(__name__)
 MODEL_PATH = 'models/model.h5'
 
 # Load your trained model
-model = load_model(MODEL_PATH)
+graph = tf.get_default_graph()
+with graph.as_default():
+    # load model at very first
+    model = load_model(MODEL_PATH)
 
 
 
