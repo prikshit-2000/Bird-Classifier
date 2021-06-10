@@ -37,9 +37,9 @@ MODEL_PATH = './models/model.h5'
 TARGET_SIZE = (224,224,3)
 
 # Load your trained model
-model = load_model(MODEL_PATH)
+model = load_model(MODEL_PATH,compile=True)
 
-tflite_model.make_predict_function()          # Necessary
+model.make_predict_function()          # Necessary
 # print('Model loaded. Start serving...')
 
 # You can also use pretrained model from Keras
