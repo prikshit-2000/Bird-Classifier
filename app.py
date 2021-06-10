@@ -22,13 +22,12 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 
 # Model saved with Keras model.save()
-MODEL_PATH = 'models/model.h5'
+MODEL_PATH = './models/model.h5'
 
 # Load your trained model
-graph = tf.get_default_graph()
-with graph.as_default():
+
     # load model at very first
-    model = load_model(MODEL_PATH)
+model = load_model(MODEL_PATH)
 
 
 
