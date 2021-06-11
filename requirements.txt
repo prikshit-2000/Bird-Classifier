@@ -1,4 +1,6 @@
+numpy
+tensorflow==2.3.1
+flask
+Werkzeug
 gunicorn
-Pillow==8.2.0
-tensorflow==2.4.1
-Flask==2.0.1
+pillow
