@@ -39,7 +39,7 @@ model = load_model(MODEL_PATH)
 
 
 def model_predict(img_path, model):
-    img = image.load_img(img_path, target_size=(224, 224,3))
+    img = image.load_img(img_path, target_size=(224, 224))
 
     # Preprocessing the image
     x = image.img_to_array(img)
