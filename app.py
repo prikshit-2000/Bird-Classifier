@@ -14,7 +14,6 @@ from tensorflow.keras.applications.imagenet_utils import preprocess_input, decod
 from tensorflow.keras.models import load_model
 
 from tensorflow.keras.preprocessing import image
-import h5py
 import tensorflow as tf
 
 
@@ -89,5 +88,4 @@ def upload():
 
 if __name__ == '__main__':
     app.run(debug=True)
-    #http_server = WSGIServer(('', 5000), app)
-    #http_server.serve_forever()
+    
