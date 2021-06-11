@@ -14,14 +14,14 @@ from tensorflow.keras.applications.imagenet_utils import preprocess_input, decod
 from tensorflow.keras.models import load_model
 
 from tensorflow.keras.preprocessing import image
-import h5py
+
 import tensorflow as tf
 
 
 # Flask utils
 from flask import Flask, redirect, url_for, request, render_template
 from werkzeug.utils import secure_filename
-from gevent.pywsgi import WSGIServer
+
 
 # Define a flask app
 app = Flask(__name__)
@@ -88,5 +88,4 @@ def upload():
 
 if __name__ == '__main__':
     app.run(debug=True)
-    #http_server = WSGIServer(('', 5000), app)
-    #http_server.serve_forever()
+    
