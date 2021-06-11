@@ -9,10 +9,10 @@ import numpy as np
 
 # Keras
 
-
+from PIL import Image
 from tensorflow.keras.models import load_model
 
-from tensorflow.keras.preprocessing import image
+# from tensorflow.keras.preprocessing import image
 
 import tensorflow as tf
 
@@ -39,7 +39,11 @@ model = load_model(MODEL_PATH)
 
 
 def model_predict(img_path, model):
-    x = image.img_to_array(image.load_img(img_path, target_size=(224,224)))
+    image = Image.open(img_path)
+    image = image.resize((224,224))
+    # data.append(np.array(image))
+    # X_test=np.array(data)
+    # x = image.img_to_array(image.load_img(img_path, target_size=(224, 224)))
 
     # Preprocessing the image
     
@@ -47,7 +51,7 @@ def model_predict(img_path, model):
     
     ## Scaling
     
-    x = np.expand_dims(x, axis=0)
+    x = np.expand_dims(image, axis=0)
    
 
    
@@ -88,6 +92,6 @@ def upload():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
     #http_server = WSGIServer(('', 5000), app)
     #http_server.serve_forever()
