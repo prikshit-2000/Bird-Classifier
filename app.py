@@ -2,7 +2,7 @@
 
 
 # coding=utf-8
-import sys
+
 import os
 
 import re
@@ -87,5 +87,5 @@ def upload():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
     
