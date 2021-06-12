@@ -1,13 +1,10 @@
 
-\
-# coding=utf-8
+
 
 import os
 import re
 import numpy as np
 
-
-# Keras
 
 from PIL import Image
 from tensorflow.keras.models import load_model
@@ -25,7 +22,7 @@ from werkzeug.utils import secure_filename
 # Define a flask app
 app = Flask(__name__)
 
-# Model saved with Keras model.save()
+
 MODEL_PATH ='bird_model.h5'
 # MODEL_PATH ='bird-96test'
 
