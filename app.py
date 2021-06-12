@@ -3,7 +3,7 @@
 # coding=utf-8
 
 import os
-import Io
+import io
 import base64
 import re
 import numpy as np
