@@ -44,7 +44,7 @@ def model_predict(img_path, model):
     image = image.resize((224,224))
     data = io.BytesIO()
     image.save(data,"JPEG")
-    enocded_image= base64.b64encode(data.getvalue())
+    encoded_image= base64.b64encode(data.getvalue())
     
     # data.append(np.array(image))
     # X_test=np.array(data)
