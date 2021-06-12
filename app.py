@@ -3,7 +3,8 @@
 # coding=utf-8
 
 import os
-
+import Io
+import base64
 import re
 import numpy as np
 
@@ -41,6 +42,10 @@ model = load_model(MODEL_PATH)
 def model_predict(img_path, model):
     image = Image.open(img_path)
     image = image.resize((224,224))
+    data = Io.BytesIO()
+    image.save(data,"JPEG")
+    enocded_image= base64.b64encode(data.getvalue())
+    
     # data.append(np.array(image))
     # X_test=np.array(data)
     # x = image.img_to_array(image.load_img(img_path, target_size=(224, 224)))
@@ -51,7 +56,7 @@ def model_predict(img_path, model):
     
     ## Scaling
     
-    x = np.expand_dims(image, axis=0)
+    x = np.expand_dims(encoded_image, axis=0)
    
 
    
