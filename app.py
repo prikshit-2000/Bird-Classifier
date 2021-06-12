@@ -42,7 +42,7 @@ model = load_model(MODEL_PATH)
 def model_predict(img_path, model):
     image = Image.open(img_path)
     image = image.resize((224,224))
-    data = Io.BytesIO()
+    data = io.BytesIO()
     image.save(data,"JPEG")
     enocded_image= base64.b64encode(data.getvalue())
     
