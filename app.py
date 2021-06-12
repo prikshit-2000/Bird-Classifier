@@ -5,6 +5,7 @@
 import os
 import re
 import numpy as np
+import gc
 
 # Keras
 
@@ -58,6 +59,7 @@ def model_predict(img_path, model):
    
 
     preds = model(x)
+    gc.collect()
     tf.keras.backend.clear_session()
     preds=int(np.argmax(preds,axis =-1))
     
