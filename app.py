@@ -57,7 +57,7 @@ def model_predict(img_path, model):
 
    
 
-    preds = model.predict(x)
+    preds = model(x)
     tf.keras.backend.clear_session()
     preds=int(np.argmax(preds,axis =-1))
     
