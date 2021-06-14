@@ -23,8 +23,8 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 
 
-MODEL_PATH ='bird_model.h5'
-# MODEL_PATH ='bird-96test'
+
+MODEL_PATH ='bird-96test'
 
 # Load your trained model
 
