@@ -9,7 +9,7 @@ It is a simple classifier built using a pre-trained Mobile network V2  to classi
 
 I have used Keras (an open source neural network library) to build this classifier. The model (bird_model.ipynb) contains a pre-trained Xception network.
 
-I've got around <strong>98% accuracy</strong> in the Test set.
+I've got around <strong>96% accuracy</strong> in the Test set.
 <br><br>
 
 ## Dataset
