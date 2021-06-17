@@ -1,9 +1,8 @@
 # Bird-Classifier
 
 ## Overview
-There are about 9200-10000 known species of birds in the world.Many of the species have gone extinct and many are in grave danger.In this porject I am classifying 275 species of birds
+There are about 9200-10000 known species of birds in the world. Many of the species have gone extinct and many are in grave danger. In this porject I am classifying 275 species of birds
 
-There 
 <br><br>
 
 ## Project Details
