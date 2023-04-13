@@ -294,7 +294,7 @@ import numpy as np
 
 # Importing the soul of model
 from PIL import Image
-from flask_ngrok import run_with_ngrok
+
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 
@@ -309,7 +309,7 @@ from werkzeug.utils import secure_filename
 # Define a flask app
 
 app = Flask(__name__)
-run_with_ngrok(app)
+
 
 # Model saved with  model.save()
 
